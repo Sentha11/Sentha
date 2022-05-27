@@ -76,7 +76,7 @@
    .section__title--intro strong {
        display: block;
    }
-   
+
    .section__subtitle{
        margin: 0;
        font-size: var(--fs-h3);
@@ -87,3 +87,5 @@
        background: var(--clr-accent);
        font-family: var(--ff-secondary);
    }
+
+   
