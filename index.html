@@ -24,7 +24,7 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="about" class="nav__link">About Me</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="projects" class="nav__link">Projects</a></li>
                 </ul>
             </nav>     
         </header>
@@ -77,26 +77,76 @@
                     <li> Graphs, Hash Tables, Binary trees, AVL trees, Heaps </li>
                     <li> Time Complexities, Graph Traversal </li>
                 </ul>
-            </div> <!-- / service-->
-
-            
+            </div> <!-- / service-->   
         </section>
        
         <section>
-            <a href="#projects" class="btn">My Projects</a>
-        </section>
-        <!-- My Work-->
-        <section class="my-work" id="work">
-            <h2 class="section__title">my work</h2>
-            <p class="section__subtitle"></p>
+           
+                
+            <a href="#projects"> My Projects & Experience</a>
+            <div class="Slideshow-container">
+                <div class="mySlides fade">
+                    <h3>Coded Messaging System</h3>
+                    <p1>2019</p1>
+                    <ul style="list-style-type:disc;">
+                        <li>Sending & Receiving encrypted audio/text message between two machines</li>
+                        <li> Encryption Algorithims, Hashtag</li>
+                        <li> Serial Communication</li>
+                    </ul>
+                </div>
 
-            <div class="portfolio">
-                <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
+                <div class="mySlides fade">
+                    
+                    <h3>Capstone Web Flask</h3>
+                    <p1>2021</p1>
+                    <ul style="list-style-type:disc;">
+                        <li>Created Back-end Database for user registraion and log in using Flask </li>
+                        <li>Designed Front-end user interface for user login and authentication with google authentication</li>
+                    </ul>
+                </div>
             </div>
-        </section>
 
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+
+              
+            <script>
+                
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                    }
+            </script>
+
+        </section>
+       
         <!--Footer-->
         <footer>
             <a href="mailto:sendu319@hotmail.com" class="footer-link">sendu319@hotmail.com</a>
