@@ -24,7 +24,11 @@
        --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
             0.5em 0.5em 0.25em rgba(0,0,0,.25);
    }
-
+    .about-me__body {
+        border: 5px soild #FFFF00;
+        text-align: center;
+    }
+    
    @media (min-width: 800px) {
        :root {
         --fs-h1: 4.5rem;
@@ -98,6 +102,15 @@
         margin-bottom: .25rem;
    }
 
+   ul {
+       line-height: 1.0;
+       margin: 0;
+       color: rgb(250, 246, 246);
+   }
+
+   li {
+        line-height: 1.0;
+   }
    .section__subtitle--intro{
        font-weight: var(--fw-reg);
    }
