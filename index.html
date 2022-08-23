@@ -66,7 +66,7 @@
                     <h3>Embedded</h3>
                     <ul style="list-style-type:disc;">
                         <li> Embedded C</li>
-                        <li> Nucleo, Raspberry Pi 4</li>
+                        <li> STM32, Raspberry Pi 4</li>
                         <li> VHDL</li>
                     </ul>
                 </div>
@@ -77,17 +77,14 @@
                     <li> Graphs, Hash Tables, Binary trees, AVL trees, Heaps </li>
                     <li> Time Complexities, Graph Traversal </li>
                 </ul>
-            </div> <!-- / service-->   
+            </div>  
         </section>
        
-        <section>
-           
-                
-            <a href="#projects"> My Projects & Experience</a>
-            <div class="Slideshow-container">
+        <section>  
+          <h4>My Project & Experience</h4>
                 <div class="mySlides fade">
-                    <h3>Coded Messaging System</h3>
-                    <p1>2019</p1>
+                    <h4>Coded Messaging System</h4>
+                    <h5>2019</h5>
                     <ul style="list-style-type:disc;">
                         <li>Sending & Receiving encrypted audio/text message between two machines</li>
                         <li> Encryption Algorithims, Hashtag</li>
@@ -97,8 +94,8 @@
 
                 <div class="mySlides fade">
                     
-                    <h3>Capstone Web Flask</h3>
-                    <p1>2021</p1>
+                    <h4>Capstone Web Flask</h4>
+                    <h5>2021</h5>
                     <ul style="list-style-type:disc;">
                         <li>Created Back-end Database for user registraion and log in using Flask </li>
                         <li>Designed Front-end user interface for user login and authentication with google authentication</li>
@@ -106,55 +103,41 @@
                 </div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-
+            
             <div style="text-align:center">
                 <span class="dot"></span> 
                 <span class="dot"></span> 
-              </div>
-
-              
-            <script>
-                
-                    let slideIndex = 1;
-                    showSlides(slideIndex);
-
-                    function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                    }
-
-                    function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                    }
-
-                    function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    let dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {slideIndex = 1}    
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex-1].style.display = "block";  
-                    dots[slideIndex-1].className += " active";
-                    }
-            </script>
-
+            </div>
+            
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }      
+          </script> 
         </section>
-       
-        <!--Footer-->
-        <footer>
-            <a href="mailto:sendu319@hotmail.com" class="footer-link">sendu319@hotmail.com</a>
-            <ul class="soical-list">
-                <li class="social-list__item"><a class="social-list__link" href="https://github.com/Sentha11/Sentha.git">Github</a></li>
-                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/ssaravanabavan/">LinkedIn</a></li>
-            </ul>
-        </footer>
-
     </body>
+      <!--Footer-->
+      <footer>
+        <a href="mailto:sendu319@hotmail.com" class="footer-link">sendu319@hotmail.com</a>
+        <ul class="soical-list">
+            <li class="social-list__item"><a class="social-list__link" href="https://github.com/Sentha11/Sentha.git">Github</a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/ssaravanabavan/">LinkedIn</a></li>
+        </ul>
+    </footer>
 </html>
