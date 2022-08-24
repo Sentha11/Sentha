@@ -14,22 +14,17 @@
         <link href="https://fonts.googleapis.com/css?faily=Source+Code+Pro:400,900|Source+sans+Pro:300,900&display=swap" rel="stylesheet">
 
     </head>
+    <header>
+        <div class="topnav">
+            <a href="#about">About Me</a>
+            <a href="#services">Skills</a>
+            <a href="#Projects">Project & Experience</a>
+          </div>   
+    </header>
     <body>
-        <header>
-
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="about" class="nav__link">About Me</a></li>
-                    <li class="nav__item"><a href="projects" class="nav__link">Projects</a></li>
-                </ul>
-            </nav>     
-        </header>
+      
         <!--Intro-->
-        <section class="intro" id="home">
+        <section class="intro" id="about">
             <h1 class="section_title section_title--intro">
                 Hi, i am 
                 <strong>Sentha</strong>
@@ -49,6 +44,7 @@
         </section>
 
         <!-- My Services-->
+        <div class = "Service">
         <section class="my-services" id="services">
             <h2 class="section__title section__title--services">Skills</h2>
             <div class="services">
@@ -77,10 +73,12 @@
                     <li> Graphs, Hash Tables, Binary trees, AVL trees, Heaps </li>
                     <li> Time Complexities, Graph Traversal </li>
                 </ul>
-            </div>  
+            </div>
+        </div>  
         </section>
-       
+       <!--Project and Expeience -->
         <section>  
+          <div class = "Projects" id = "Projects"> 
           <h4>My Project & Experience</h4>
                 <div class="mySlides">
                     <h4>Coded Messaging System</h4>
@@ -103,7 +101,7 @@
                         
                     </ul>
                 </div>
-            </div>
+            
 <!--
             <a class="prev" onclick="plusSlides(-1)"><</a>
             <a class="next" onclick="plusSlides(1)">></a>
@@ -113,30 +111,40 @@
                 <span class="dot" onclick="currentSlide(2)"></span> 
             </div>
             
-        <script>
-                let slideIndex = 0;
-                howSlides();
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
 
-                function showSlides() 
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) 
                 {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    let dots = document.getElementsByClassName("dot");
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-                    slideIndex++;
-                    if (slideIndex > slides.length) {slideIndex = 1}    
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex-1].style.display = "block";  
-                    dots[slideIndex-1].className += " active";
-                    setTimeout(showSlides, 4000); // Change image every 2 seconds
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) 
+                {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
                 }
           </script> 
+         </div>  
         </section>
     </body>
+
       <!--Footer-->
       <footer>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
