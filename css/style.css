@@ -43,23 +43,21 @@
 
    /* General Styles */
    body {
-       background: var(--clr-light);
-       color: var(--clr-dark);
-       margin: 0;
-       font-family: Arial, Helvetica, sans-serif;
-
-       font-size: var(--fs-body);
-       line-height: 1.6;
-
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
    }
    section {
        padding: 5em 2em;
    }
 
    img {
+       vertical-align: middle;
+       border-style: none;
        display: block;
        max-width: 100%
-   }
+    }
+
 
    .strong {font-weight: var(--fw-bold)}
 
@@ -201,7 +199,10 @@
 .background-container{
     background-color: #303030;
 }
-
+/* Intro */
+.intro {
+    background-color: rosybrown;
+}
 /* My service section */
 .my-services {
     background-color: var(--clr-light);
@@ -209,6 +210,35 @@
     background-blend-mode: multiply;
     color: var(--clr-light);
 
+}
+
+.skill-b::after {
+    content: "";
+}
+
+li::after {
+    font-weight: bold;
+    content: "o";
+    color: #C8CAE4;
+}
+
+.space{
+    height: 40px;
+}
+
+.left-hand {
+    text-align: right;
+}
+
+.right-hand{
+    text-align: left;
+}
+
+.h-gif{
+    width: 20%;
+    text-align: center;
+    margin-left: 30px;
+    border-radius: 50%;
 }
 
 .section__title--services {

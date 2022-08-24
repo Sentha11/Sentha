@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-wdith, initial-scale=1">
         <title>Sentha Portfolio Website</title>
         <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+         <link rel="stylesheet" href="css/style.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link rel="styelsheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/> 
 
@@ -25,6 +25,7 @@
       
         <!--Intro-->
         <section class="intro" id="about">
+        <div class="intro">
             <h1 class="section_title section_title--intro">
                 Hi, i am 
                 <strong>Sentha</strong>
@@ -41,47 +42,77 @@
                 <p>So this is me... I like coding, movies and playing soccer  </p>
   
             </header>
+        </div>
         </section>
 
         <!-- My Services-->
-        <div class = "Service">
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">Skills</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Web Development</h3>
-                    <ul style="list-style-type:disc;">
-                        <li> HTML, CSS, Javascript, PHP, Python</li>
-                        <li> Nodejs, React, Flask </li>
-                        <li> SQL(mySQL), noSQL (MongoDB) </li>
-                    </ul>
-                    <p></p>
-                </div> 
-            </br>
-                <div class="service">
-                    <h3>Embedded</h3>
-                    <ul style="list-style-type:disc;">
-                        <li> Embedded C</li>
-                        <li> STM32, Raspberry Pi 4</li>
-                        <li> VHDL</li>
-                    </ul>
-                </div>
-            </br>
-                <h3>Data Structures & Algorithim</h3>
-                <ul style="list-style-type:disc;">
-                    <li> C, C++</li>
-                    <li> Graphs, Hash Tables, Binary trees, AVL trees, Heaps </li>
-                    <li> Time Complexities, Graph Traversal </li>
-                </ul>
-            </div>
-        </div>  
-        </section>
+        <div class = "Service" id="services">
+            <h2>Skills</h2>
+                <table>
+                    <tr>
+                        <td>     
+                            <h3 class="left-hand">Web Development</h3>
+                            <ul class="left-hand" style="list-style-type:disc;">
+                                <li class="skill-a"> 
+                                    
+                                    HTML, CSS, Javascript, PHP, Python
+                                    
+                                </li>
+                                <li class="skill-a"> 
+                                    
+                                    Nodejs, React, Flask
+                                 
+                                </li>
+                                <li class="skill-a"> 
+                               
+                                    SQL(mySQL), noSQL (MongoDB)
+                                    
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <img class="h-gif" src="img\html.gif" alt="html" style="width:48px;height:48px;">
+                        </td>
+                        <tr class="space"></tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="right-hand">Embedded</h3>
+                            <ul class="right-hand" style="list-style-type:disc;">
+                                <li class="skill-a"> Embedded C</li>
+                                <li class="skill-a"> STM32, Raspberry Pi 4</li>
+                                <li class="skill-a"> VHDL</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <img class="h-gif" src="img\coding.gif" alt="html" style="width:48px;height:48px;">
+                        </td>
+                        <tr class="space"></tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="left-hand">Data Structures & Algorithim</h3>
+                            <ul class= "left-hand">
+                                <li class=""> C, C++</li>
+                                <li> Graphs, Hash Tables, Binary trees, AVL trees, Heaps </li>
+                                <li> Time Complexities, Graph Traversal </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <img class="h-gif" src="img\DSA.gif" alt="html" style="width:48px;height:48px;">
+                        </td>
+                        <tr class="space"></tr>
+                    </tr>
+                </table>
+        </div>         
+
+        
        <!--Project and Expeience -->
-        <section>  
-          <div class = "Projects" id = "Projects"> 
+          
+          <div class ="Projects" id = "Projects"> 
           <h4>My Project & Experience</h4>
                 <div class="mySlides">
-                    <h4>Coded Messaging System</h4>
+                    <h5>Coded Messaging System</h5>
                     <h5>2019</h5>
                     <ul style="list-style-type:disc;">
                         <li>Sending & Receiving encrypted audio/text message between two machines</li>
@@ -92,13 +123,12 @@
 
                 <div class="mySlides">
                     
-                    <h4>Capstone Web Flask</h4>
+                    <h5>Capstone Web Flask</h5>
                     <h5>2021</h5>
                     <ul style="list-style-type:disc;">
                         <li>Created Back-end Database for user registraion and log in using Flask </li>
                     </br>
-                        <li>Designed Front-end user interface for user login and authentication with google authentication</li>
-                        
+                        <li>Designed Front-end user interface for user login and authentication with google authentication</li>  
                     </ul>
                 </div>
             
@@ -142,7 +172,6 @@
                 }
           </script> 
          </div>  
-        </section>
     </body>
 
       <!--Footer-->
