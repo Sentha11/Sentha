@@ -283,7 +283,18 @@
   .active, .dot:hover {
     background-color: #717171;
   }
-  
+  /* Footer*/
+
+  .Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ion-icon {
+    color: black;
+  }
+
   /* Fading animation */
   .fade {
     animation-name: fade;
