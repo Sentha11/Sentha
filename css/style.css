@@ -35,9 +35,14 @@
     background:#777;
     color: white;
     position:relative;
+    background-position: center;
+    background-size: cover;
    
     }
+    .Projects{
+        background-image:url("img/background.jpg");
 
+    }
     .container {
         position: absolute;
         bottom:0;
@@ -46,6 +51,17 @@
         padding-bottom: 50px;
     }
 
+    .overlay-image {
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        top:0; 
+        background-position: center;
+        background-size: cover;
+        opacity:0.85;
+
+    }
     
    @media (min-width: 800px) {
        :root {
