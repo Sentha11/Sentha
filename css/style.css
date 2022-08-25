@@ -29,9 +29,24 @@
         text-align: center;
     }
     
-    .background-container{
-        background-color: #16e0bd;
+   /*carousel*/
+   .carousel-item {
+    height:32rem;
+    background:#777;
+    color: white;
+    position:relative;
+   
     }
+
+    .container {
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        padding-bottom: 50px;
+    }
+
+    
    @media (min-width: 800px) {
        :root {
         --fs-h1: 4.5rem;
@@ -122,7 +137,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: rgb(49, 19, 19);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -242,7 +257,7 @@ li {
 skill-a::before {
     color: inherit;
 }
-li::before {
+/*li::before {
     font-weight: bold;
     content: "✘";
     color: #fafafa;
@@ -253,9 +268,9 @@ li::before {
 }
 li::after {
     font-weight: bold;
-    /*content: "✘";*/
-    color: #C8CAE4;
-}
+    content: "✘"; 
+} 
+*/
 td {
     width: 50%;
 }
