@@ -167,6 +167,8 @@
        line-height: 1.0;
        margin: 0;
        color: slateblue;
+       text-align: center;
+       display: inline;
    }
 
    li {
@@ -181,7 +183,7 @@
 
    .section__title--intro strong {
        display: block;
-   }
+       }
 
    .section__subtitle{
        margin: 0;
@@ -236,13 +238,16 @@
            left: -1.5em;
            width: calc(100% + 1.5em);
        }
+
    }
 .background-container{
     background-color: #303030;
 }
+
+
 /* Intro */
 .intro {
-    background-color: rosybrown;
+    background: rosybrown;
 }
 /* My service section */
 .my-services {
@@ -317,7 +322,64 @@ td {
     margin-left: 30px;
     border-radius: 50%;
 }
+/* intro title */
 
+.flip_text{
+    text-transform: uppercase;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    height: 50px;
+    padding: 20px 20px;
+    display: flex;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+}
+
+span{
+    display: block;
+    height: 100%;
+    padding-left: 10px;
+    animation: spin_words 6s infinite;
+}
+
+@keyframes spin_words {
+    10%
+    {
+        transform: translateY(-112%);
+    }
+    25% 
+    {
+        transform: translateY(-100%);
+    }
+    35% 
+    {
+        transform:translateY(-212%);
+    }
+    50%
+    {
+        transform: translateY(-200%);
+    }
+    60% 
+    {
+        transform: translateY(-312%);
+    }
+    75% 
+    {
+        transform: translateY(-300%);
+    }
+    85% 
+    {
+        transform: translateY(-412%);
+    }
+    100% 
+    {
+        transform: translateY(-400%);
+    }
+
+}
+
+.word {
+    overflow:hidden;
+}
 .section__title--services {
     color: var(-clr-accent);
     position: relative;
@@ -336,6 +398,7 @@ td {
 .services{
     margin-bottom: 4em;
 }
+
 
 .Service {
     background-color:#bbb;
